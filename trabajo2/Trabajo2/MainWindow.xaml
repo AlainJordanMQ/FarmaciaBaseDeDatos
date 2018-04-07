@@ -1,0 +1,160 @@
+﻿<Window x:Class="Trabajo2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trabajo2"
+        mc:Ignorable="d"
+         Background="OliveDrab"
+        Title="Trabajo" Height="450" Width="800">
+    <TabControl  Background="LightYellow">
+        <TabItem Header="Bienvenidos" Background="PaleGreen">
+
+            <Label FontSize="48" Content="              &#xA;&#x9;Bienvenidos a la &#xA;&quot;Farmacia Mi Pequeño Enfermito&quot;" Margin="0,59,0,106"/>
+        </TabItem>
+        <TabItem Header="Empleados" Background="PaleGreen">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0">
+                    <Button x:Name="btnEmpleadosNuevo" Click="btnEmpleadosNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnEmpleadosEditar" Click="btnEmpleadosEditar_Click">Editar</Button>
+                    <Button x:Name="btnEmpleadosGuardar" Click="btnEmpleadosGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnEmpleadosCancelar" Click="btnEmpleadosCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnEmpleadosEliminar" Click="btnEmpleadosEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Id:</TextBlock>
+                        <TextBlock x:Name="txbEmpleadosId"  Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Nombre:</TextBlock>
+                        <TextBox x:Name="txbEmpleadosNombre" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgEmpleaods" Grid.Row="2" IsReadOnly="True"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Medicamentos" Background="PaleGreen">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0">
+                    <Button x:Name="btnMedicamentosNuevo" Click="btnMedicamentosNuevo_Click">Nuevo</Button>
+                    <Button x:Name="btnMedicamentosEditar" Click="btnMedicamentosEditar_Click">Editar</Button>
+                    <Button x:Name="btnMedicamentosGuardar" Click="btnMedicamentosGuardar_Click">Guardar</Button>
+                    <Button x:Name="btnMedicamentosCancelar" Click="btnMedicamentosCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnMedicamentosEliminar" Click="btnMedicamentosEliminar_Click">Eliminar</Button>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Id:</TextBlock>
+                        <TextBlock x:Name="txbMedicamentosId"  Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Nombre:</TextBlock>
+                        <TextBox x:Name="txbMedicamentosNombre" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Categoria:</TextBlock>
+                        <TextBox x:Name="txbMedicamentosCategoria" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Cantidad compra:</TextBlock>
+                        <TextBox x:Name="txbMedicamentosCantidadCompra" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Cantidad Venta:</TextBlock>
+                        <TextBox x:Name="txbMedicamentosCantidadVenta" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Descripcion:</TextBlock>
+                        <TextBox x:Name="txbMedicamentosDescripcion" Width="200"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <DataGrid x:Name="dtgMedicamentos" Grid.Row="2" IsReadOnly="True"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Venta" Background="PaleGreen">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <WrapPanel Grid.Row="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Id:</TextBlock>
+                        <TextBlock x:Name="txbVentaId"  Width="200"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>RFC:</TextBlock>
+                        <TextBox x:Name="txbValeRFC" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Tel:</TextBlock>
+                        <TextBox x:Name="txbValeTel" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Direccion:</TextBlock>
+                        <TextBox x:Name="txbValeDireccion" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Email:</TextBlock>
+                        <TextBox x:Name="txbValeEmail" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Cliente:</TextBlock>
+                        <TextBox x:Name="txbValeCliente" Width="200"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Empleado:</TextBlock>
+                        <ComboBox  Width="82" x:Name="cmbVentaEmpleado" SelectionChanged="cmbVentaEmpleado_SelectionChanged"></ComboBox>
+                        <TextBlock>Medicamento:</TextBlock>
+                        <ComboBox  Width="82" x:Name="cmbVentaMedicamento" SelectionChanged="cmbVentaMedicamento_SelectionChanged"></ComboBox>
+                        <TextBlock>Precio:</TextBlock>
+                        <ComboBox Width="82" x:Name="cmbVentaPresio" SelectionChanged="cmbVentaPresio_SelectionChanged"></ComboBox>
+
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1">
+                    <Button x:Name="btnVentaNueva" Click="btnVentaNueva_Click">Nueva Venta</Button>
+                    <Button x:Name="btnVentaCancelar" Click="btnVentaCancelar_Click">Cancelar</Button>
+                    <Button x:Name="btnVentaEliminar" Click="btnVentaEliminar_Click">Eliminar</Button>
+                    <Button x:Name="btnVentaAceptar" Click="btnVentaAceptar_Click">Aceptar</Button>
+
+                </WrapPanel>
+                <WrapPanel Grid.Row="2">
+
+                    <Button x:Name="btnVentaTotalPagar" Click="btnVentaTotalPagar_Click">Total Pagar</Button>
+                    <TextBox x:Name="txbVentaTotalPagar" Width="80"></TextBox>
+                    <Label>Dinero recibido:</Label>
+                    <TextBox x:Name="txbVentaDinaroRecibido" Width="80"></TextBox>
+                    <Button x:Name="btnVentaCalcular" Click="btnVentaCalcular_Click">Calcular</Button>
+                    <Label>Cambio:</Label>
+                    <TextBox x:Name="txbVentaCambio" Width="80"></TextBox>
+                </WrapPanel>
+                <WrapPanel Grid.Row="3">
+                    <Button x:Name="btnVentaGenerarVenta" Click="btnVentaGenerarVenta_Click">Generar Venta</Button>
+
+                </WrapPanel>
+                <WrapPanel Grid.Row="4">
+                    <DataGrid x:Name="dtgVale" Grid.Row="3" IsReadOnly="True" Height="267" Width="783"/>
+                </WrapPanel>
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+</Window>
